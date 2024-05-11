@@ -55,14 +55,16 @@ pip install -r requirements.txt
 python webui.py
 ```
 
-运行 api 程序，分别使用端口 9880 与 9881 提供派蒙与林亦的语音生成服务：
+运行 api 程序，分别使用端口 9880 与 9881 提供派蒙与林亦的语音生成服务，以下请使用 GPT-SoVITS 代码库完成：
 ```
 python api.py -s SoVITS_weights/paimeng2_e110_s159940.pth -g GPT_weights/paimeng2-e10.ckpt -dr samples/Paimon/疑问—哇，这个，还有这个…只是和史莱姆打了一场，就有这么多结论吗？.wav -dt "哇，这个，还有这个…只是和史莱姆打了一场，就有这么多结论吗？" -dl "zh" -a 127.0.0.1 -p 9880
-python api.py -s SoVITS_weights/xxx_e25_s1150.pth -g GPT_weights/xxx-e50.ckpt -dr "samples/linyi/【愤怒】你这问题太弱智了，我都不知道该从哪开始骂你。.WAV" -dt "你这问题太弱智了，我都不知道该从哪开始骂你。" -dl "zh" -a 127.0.0.1 -p 9881
+python api.py -s SoVITS_weights/linyi_e25_s1150.pth -g GPT_weights/linyi-e50.ckpt -dr "samples/linyi/【愤怒】你这问题太弱智了，我都不知道该从哪开始骂你。.WAV" -dt "你这问题太弱智了，我都不知道该从哪开始骂你。" -dl "zh" -a 127.0.0.1 -p 9881
 ```
 
 运行问答生成程序：
-python start_conversation.py
+```
+python start_qa_dialogue.py
+```
 
 ## 参考
 

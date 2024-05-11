@@ -3,10 +3,10 @@ import time
 
 from mlx_lm import load, generate
 
-# with open('mlx_model/Qwen1.5-32B-Chat/tokenizer_config.json', 'r') as file:
+# with open('../models/Qwen1.5-32B-Chat/tokenizer_config.json', 'r') as file:
 #     tokenizer_config = json.load(file)
 
-with open('mlx_model/Qwen1.5-32B-Chat-FT-4Bit-V2/tokenizer_config.json', 'r') as file:
+with open('../models/Qwen1.5-32B-Chat-FT-4Bit/tokenizer_config.json', 'r') as file:
     tokenizer_config = json.load(file)
 
 # model, tokenizer = load(
@@ -15,16 +15,16 @@ with open('mlx_model/Qwen1.5-32B-Chat-FT-4Bit-V2/tokenizer_config.json', 'r') as
 # )
 
 model, tokenizer = load(
-    "mlx_model/Qwen1.5-32B-Chat-FT-4Bit-V2/",
+    "../models/Qwen1.5-32B-Chat-FT-4Bit/",
     tokenizer_config=tokenizer_config
 )
 
 sys_msg = 'You are a helpful assistant'
 
-# with open('text/chat_template_qwen_og.txt', 'r') as template_file:
+# with open('../text/chat_template.txt', 'r') as template_file:
 #     template = template_file.read()
 
-with open('text/chat_template_neutral.txt', 'r') as template_file:
+with open('../text/chat_template.txt', 'r') as template_file:
     template = template_file.read()
 
 while True:
