@@ -37,7 +37,7 @@ python -m mlx_lm.fuse --model models/Qwen1.5-32B-Chat --save-path models/Qwen1.5
 ```
 
 对合并后的模型进行量化加速：
-python convert_model.py
+python tools/compress_model.py
 
 对微调训练后的模型进行对话测试：
 python chat.py
