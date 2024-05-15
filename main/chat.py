@@ -45,3 +45,4 @@ while True:
     )
 
     print("%s: %s (Time %d ms)\n" % ("回答", response, (time.time() - time_ckpt) * 1000))
+    print("fhg")
